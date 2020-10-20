@@ -13,24 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('Principal', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('Cursos',function (){
-    return "Pagina Cursos";
-
-
+Route::get('dante', function () {
+    return "WENA DANTE";
 });
 
-Route::get('Cursos/{curso}',function ($curso){
 
-    return "Bienvenido al curso:$curso";
 
-});
 
-Route::get('Cursos/{create}',function ($create){
 
-    return "Podra crear un curso:$create";
 
-});
+
