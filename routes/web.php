@@ -24,9 +24,6 @@ Route::get('/home', function () {
 });
 
 
-
-
-
 Route::get('/gyms', [GymController::class, 'index'])->name('gyms.index');
 
 Route::get('/gyms/create', [GymController::class, 'create'])->name('gyms.create');
@@ -47,20 +44,6 @@ Route::prefix('gyms')
        // Route::get('{benefit}', [BenefitController::class, 'show'])->name('show');
         Route::get('', [GymController::class, 'index'])->name('index');
     });
-
-
-
-
-Route::get('dante', function () {
-    return "WENA DANTE";
-});
-
-
-
-
-
-
-
 
 Auth::routes();
 
