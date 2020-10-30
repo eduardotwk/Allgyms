@@ -97,7 +97,7 @@
     </section>
 
     <section>
-    <footer> class="hero is-small is-light">
+    <footer>
         <div class="hero-body">
             <div class="container has-text-centered">
                 <a href="https://bulma.io">
@@ -117,7 +117,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
     </section>
 </div>

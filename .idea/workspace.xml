@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="nueva vista pagina principal">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +192,7 @@
       <workItem from="1603995940530" duration="6505000" />
       <workItem from="1604003147175" duration="6860000" />
       <workItem from="1604013884518" duration="1026000" />
-      <workItem from="1604015408808" duration="3638000" />
+      <workItem from="1604015408808" duration="9371000" />
     </task>
     <task id="LOCAL-00001" summary="bulma?">
       <created>1604002891631</created>
@@ -214,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604019015806</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nueva vista pagina principal">
+      <created>1604019118873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604019118873</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +258,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603225761333" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604020477082">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604020477082" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603995066857">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
