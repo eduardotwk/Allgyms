@@ -97,7 +97,7 @@
     </section>
 
     <section>
-    <footer class="hero is-small is-light">
+    <footer> class="hero is-small is-light">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <a href="https://bulma.io">
@@ -117,8 +117,9 @@
                 </div>
             </div>
         </div>
-        </section>
+
     </footer>
+    </section>
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', () => {

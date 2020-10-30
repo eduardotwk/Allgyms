@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="bulma?">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="nueva vista pagina principal">
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +191,7 @@
       <workItem from="1603995940530" duration="6505000" />
       <workItem from="1604003147175" duration="6860000" />
       <workItem from="1604013884518" duration="1026000" />
-      <workItem from="1604015408808" duration="3312000" />
+      <workItem from="1604015408808" duration="3638000" />
     </task>
     <task id="LOCAL-00001" summary="bulma?">
       <created>1604002891631</created>
@@ -209,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604015562770</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="nueva vista pagina principal">
+      <created>1604019015806</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604019015806</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +234,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bulma?" />
-    <option name="LAST_COMMIT_MESSAGE" value="bulma?" />
+    <MESSAGE value="nueva vista pagina principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="nueva vista pagina principal" />
   </component>
   <component name="WindowStateProjectService">
     <state x="647" y="310" width="241" height="276" key="Github.ShareDialog" timestamp="1602811612413">
