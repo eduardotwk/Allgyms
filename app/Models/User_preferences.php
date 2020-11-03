@@ -5,18 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gym extends Model
+class User_preferences extends Model
 {
     use HasFactory;
-
-    protected $table = 'gyms';
+    protected $table = 'user_preferences';
 
     protected $fillable = [
-        'nombre',
-        'ubicacion',
-        'telefono',
-        'detalles'];
-
-
-
+        'user_id',
+        'current_tenant',
+    ];
 }

@@ -9,4 +9,11 @@ class Tenant extends Model
 {
     use HasFactory;
     protected $table = 'tenants';
+
+    protected $fillable = [
+        'nombre',
+        'codigo',
+        'telefono',
+        'email',
+    ];
 }

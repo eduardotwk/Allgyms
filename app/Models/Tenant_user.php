@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gym extends Model
+class Tenant_user extends Model
 {
     use HasFactory;
 
-    protected $table = 'gyms';
+    protected $table = 'tenants_user';
 
     protected $fillable = [
-        'nombre',
-        'ubicacion',
-        'telefono',
-        'detalles'];
-
-
-
+        'tenant_id',
+        'user_id',
+        'user_status_id',
+    ];
 }
