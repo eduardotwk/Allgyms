@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGymsTable extends Migration
+class CreateUserPreferencesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateGymsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gyms', function (Blueprint $table) {
+        Schema::create('user_preferences', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('tenant_id');
-            $table->string('nombre');
-            $table->string('ubicacion');
-            $table->string('telefono');
-            $table->string('detalles');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('current_tenant');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateGymsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gyms');
+        Schema::dropIfExists('user_preferences');
     }
 }

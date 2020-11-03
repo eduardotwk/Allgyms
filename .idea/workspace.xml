@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="nueva vista pagina principal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/GymController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/GymController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_213555_create_gyms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_27_213555_create_gyms_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,13 +161,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/sass" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gimschile" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\AllGyms" />
       <recent name="C:\xampp\htdocs\AllGyms\resources\sass" />
     </key>
   </component>
@@ -193,6 +195,7 @@
       <workItem from="1604003147175" duration="6860000" />
       <workItem from="1604013884518" duration="1026000" />
       <workItem from="1604015408808" duration="9371000" />
+      <workItem from="1604432460033" duration="4693000" />
     </task>
     <task id="LOCAL-00001" summary="bulma?">
       <created>1604002891631</created>
@@ -246,6 +249,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="nueva vista pagina principal" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="705" y="285" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604437490502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="705" y="285" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604437490502" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604433416046">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604433416046" />
     <state x="647" y="310" width="241" height="276" key="Github.ShareDialog" timestamp="1602811612413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
