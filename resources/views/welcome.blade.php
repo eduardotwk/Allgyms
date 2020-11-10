@@ -33,21 +33,22 @@
                         <div class="navbar-end">
                             <a href="#"
                                class="navbar-item has-text-weight-semibold">
-                                <span>Mejores Clasificados</span>
-                                <span class="tag is-success m-l-5">Best</span>
+                                <button class="button is-primary is-outlined">Mejores Clasificados</button>
                             </a>
+
                             <a href="{{ url('create') }}"
-                               class="navbar-item has-text-weight-semibold">Publicar gimnasio</a>
-                            <a href="#"
-                               class="navbar-item has-text-weight-semibold">En oferta</a>
+                               class="navbar-item has-text-weight-semibold">
+                            <button class="button is-primary is-outlined">Publicar gimnasio</button>
+                            </a>
+
                             @if (Route::has('login'))
                                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                     @auth
-                                        <a href="{{ url('/home') }}" class="col-md-4 col-form-label text-md-right" class="button is-primary">Home</a>
+                                        <a href="{{ url('/home') }}" class="button is-link is-outlined" class="button is-primary">Home</a>
                                     @else
-                                        <a href="{{ route('login') }}" class="col-md-4 col-form-label text-md-right"class="button is-primary">Ingresar</a>
+                                        <a href="{{ route('login') }}" class="button is-primary is-outlined">Ingresar</a>
                                         @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="col-md-4 col-form-label text-md-right"class="button is-primary">Registrarme</a>
+                                            <a href="{{ route('register') }}" class="button is-primary is-outlined">Registrarme</a>
                                         @endif
                                     @endif
                                 </div>
