@@ -22,45 +22,59 @@
             <div class="column is-4 is-offset-4">
                 <div class="box">
                     <p class="subtitle is-4">Inicio sesion</p>
-                    <br />
-                    <form method="post" action="{{ route('login') }}">
-                        <div class="field">
-                            <p class="control has-icons-left has-icons-right">
-                                <input class="input is-medium" type="email" placeholder="Correo electronico" />
-                                <span class="icon is-medium is-left">
+
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <form method="post" action="{{ route('login') }}">
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                    <input class="input is-medium" name="email" type="email" placeholder="Correo electronico" />
+                                    <span class="icon is-medium is-left">
                                 <i class="fas fa-envelope"></i></span>
-                                <span class="icon is-medium is-right"></span>
-                            </p>
-                        </div>
+                                    <span class="icon is-medium is-right"></span>
+                                </p>
+                            </div>
 
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input class="input is-medium" type="password" placeholder="Contraseña" />
-                                <span class="icon is-small is-left">
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input class="input is-medium" name= "password" type="password" placeholder="Contraseña" />
+                                    <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i></span>
-                            </p>
-                        </div>
+                                </p>
+                            </div>
 
-                        <div class="field">
-                            <label class="checkbox">
-                                <input type="checkbox" />
-                                Recordarme
-                            </label>
-                        </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                        <button class="button is-block is-primary is-large is-fullwidth">Ingresar</button><br/>
-                        <p class="help is-success">Al identificarte aceptas nuestras Condiciones de uso y venta. Consulta nuestro Aviso de privacidad y nuestras Aviso de Cookies y Aviso sobre publicidad basada en los intereses del usuario.</p>
-                    </form>
+                                        <label class="form-check-label" for="remember">
+                                            {{ __('Remember Me') }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="submit" class="button is-block is-primary is-large is-fullwidth">
+                                        {{ __('Login') }}
+                                    </button>
+
+                                    @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif
+                                </div>
+
+                                <p class="help is-success">Al identificarte aceptas nuestras Condiciones de uso y venta. Consulta nuestro Aviso de privacidad y nuestras Aviso de Cookies y Aviso sobre publicidad basada en los intereses del usuario.</p>
+                            </div>
+                        </form>
                 </div>
-                <p class="has-text-grey">
-                    <a href="{{ route('register') }}">Registrarse</a> &nbsp;·&nbsp;
-                    <a href="/">Volver al inicio</a> &nbsp;·&nbsp;
-                </p>
+
             </div>
         </div>
     </div>
 </section>
 </body>
 </html>
-
-
