@@ -66,12 +66,10 @@
                                         </a>
                                     @endif
                                 </div>
-
                                 <p class="help is-success">Al identificarte aceptas nuestras Condiciones de uso y venta. Consulta nuestro Aviso de privacidad y nuestras Aviso de Cookies y Aviso sobre publicidad basada en los intereses del usuario.</p>
                             </div>
                         </form>
                 </div>
-
             </div>
         </div>
     </div>

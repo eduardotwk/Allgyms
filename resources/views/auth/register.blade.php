@@ -26,7 +26,6 @@
                         <p class="subtitle is-4">Registrarse</p>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-
                             <div class="field">
                                 <p class="control has-icons-left has-icons-right">
                                     <input id= "name" class="input is-medium" type="nombre" name="name" placeholder="Nombre" />
@@ -35,9 +34,6 @@
                                 <i class="fas fa-user"></i></span>
                                 </p>
                             </div>
-
-
-
                             <div class="field">
                                 <p class="control has-icons-left has-icons-right">
                                     <input id= "email" class="input is-medium" name="email" type="email" placeholder="Correo electronico" />

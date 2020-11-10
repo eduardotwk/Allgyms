@@ -14,7 +14,7 @@ use App\Http\Controllers\Web\GymController;
 |
 */
 
-Route::get('', function () {
+Route::get('/', function () {
     return view('welcome');
 
 });
@@ -23,13 +23,14 @@ Route::get('/home', function () {
 
 });
 
+
 Auth::routes();
 
 
 
 Route::get('/gyms', [GymController::class, 'index'])->name('gyms.index');
 
-Route::get('/gyms/create', [GymController::class, 'create'])->name('gyms.create');
+Route::get('/create', [GymController::class, 'create'])->name('gyms.create');
 
 
 Route::prefix('gyms')
