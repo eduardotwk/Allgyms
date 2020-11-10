@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="controladores">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="Interfaces inicio sesion y registro" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +195,7 @@
       <workItem from="1604013884518" duration="1026000" />
       <workItem from="1604015408808" duration="9371000" />
       <workItem from="1604432460033" duration="4693000" />
-      <workItem from="1604959879072" duration="9869000" />
+      <workItem from="1604959879072" duration="10128000" />
     </task>
     <task id="LOCAL-00001" summary="bulma?">
       <created>1604002891631</created>
@@ -238,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604439026577</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Interfaces inicio sesion y registro">
+      <created>1604970595104</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604970595104</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +261,8 @@
     <MESSAGE value="bulma?" />
     <MESSAGE value="nueva vista pagina principal" />
     <MESSAGE value="controladores" />
-    <option name="LAST_COMMIT_MESSAGE" value="controladores" />
+    <MESSAGE value="Interfaces inicio sesion y registro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces inicio sesion y registro" />
   </component>
   <component name="WindowStateProjectService">
     <state x="705" y="285" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604437490502">
