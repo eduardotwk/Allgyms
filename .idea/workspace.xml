@@ -16,15 +16,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="Interfaces inicio sesion y registro">
+    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="Interfaces inicio sesion y registro 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/gyms/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/gyms/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +206,7 @@
       <workItem from="1604432460033" duration="4693000" />
       <workItem from="1604959879072" duration="10566000" />
       <workItem from="1604971527259" duration="2002000" />
-      <workItem from="1605035540107" duration="3147000" />
+      <workItem from="1605035540107" duration="7121000" />
     </task>
     <task id="LOCAL-00001" summary="bulma?">
       <created>1604002891631</created>
@@ -247,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604970595104</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Interfaces inicio sesion y registro 2">
+      <created>1605039638162</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605039638162</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +268,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -270,7 +292,8 @@
     <MESSAGE value="nueva vista pagina principal" />
     <MESSAGE value="controladores" />
     <MESSAGE value="Interfaces inicio sesion y registro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaces inicio sesion y registro" />
+    <MESSAGE value="Interfaces inicio sesion y registro 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces inicio sesion y registro 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="705" y="285" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604437490502">
