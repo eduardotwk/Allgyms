@@ -1,77 +1,89 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Aldi Duzha" />
+    <meta name="description" content="Free Bulma Login Template, part of Awesome Bulma Templates" />
+    <meta name="keywords" content="bulma, login, page, website, template, free, awesome" />
+    <link rel="canonical" href="https://aldi.github.io/bulma-login-template/" />
+    <title>AllGyms</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<section class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <p class="subtitle is-4">Registrarse</p>
+                    <br />
+                    <form>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input is-medium" type="nombre" placeholder="Nombre" />
+                                <span class="icon is-medium is-left">
+                                <span class="icon is-medium is-right"></span>
+                                <i class="fas fa-user"></i></span>
+                            </p>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input is-medium" type="apellido" placeholder="Apellido" />
+                                <span class="icon is-medium is-left"></span>
+                            </p>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input is-medium" type="email" placeholder="Correo electronico" />
+                                <span class="icon is-medium is-left">
+                                <i class="fas fa-envelope"></i></span>
+                                <span class="icon is-medium is-right"></span>
+                            </p>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" type="password" placeholder="Contraseña" />
+                                <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i></span>
+                            <p class="help is-success">Utiliza ocho caracteres como mínimo con una combinación de letras, números y símbolos</p>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-medium" type="confirm_password" placeholder="Confirmar contraseña" />
+                                <span class="icon is-small is-left">
+                              <i class="fas fa-lock"></i></span>
+                            </p>
                         </div>
+
+                        <div class="field">
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                Recordarme
+                            </label>
+                        </div>
+                            <button class="button is-block is-primary is-large is-fullwidth">Registrarme</button><br/>
+                            <p class="help is-success">Al identificarte aceptas nuestras Condiciones de uso y venta. Consulta nuestro Aviso de privacidad y nuestras Aviso de Cookies y Aviso sobre publicidad basada en los intereses del usuario.</p>
                     </form>
                 </div>
+                <p class="has-text-grey">
+                    <a href="{{ route('login') }}">Iniciar sesion</a> &nbsp;·&nbsp;
+                    <a href="#">Volver al inicio</a> &nbsp;·&nbsp;
+                </p>
             </div>
         </div>
     </div>
-</div>
-@endsection
+</section>
+</body>
+</html>
+

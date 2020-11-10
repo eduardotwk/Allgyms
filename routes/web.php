@@ -14,7 +14,7 @@ use App\Http\Controllers\Web\GymController;
 |
 */
 
-Route::get('/', function () {
+Route::get('', function () {
     return view('welcome');
 
 });
