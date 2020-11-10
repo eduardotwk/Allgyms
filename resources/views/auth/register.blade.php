@@ -78,7 +78,7 @@
                 </div>
                 <p class="has-text-grey">
                     <a href="{{ route('login') }}">Iniciar sesion</a> &nbsp;·&nbsp;
-                    <a href="#">Volver al inicio</a> &nbsp;·&nbsp;
+                    <a href="/">Volver al inicio</a> &nbsp;·&nbsp;
                 </p>
             </div>
         </div>

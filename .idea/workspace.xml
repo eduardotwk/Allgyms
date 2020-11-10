@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="Interfaces inicio sesion y registro" />
+    <list default="true" id="e2c27912-f3d7-4cce-b53b-33d33cbdce2f" name="Default Changelist" comment="Interfaces inicio sesion y registro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +200,8 @@
       <workItem from="1604013884518" duration="1026000" />
       <workItem from="1604015408808" duration="9371000" />
       <workItem from="1604432460033" duration="4693000" />
-      <workItem from="1604959879072" duration="10128000" />
+      <workItem from="1604959879072" duration="10566000" />
+      <workItem from="1604971527259" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="bulma?">
       <created>1604002891631</created>
