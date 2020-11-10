@@ -23,6 +23,9 @@ Route::get('/home', function () {
 
 });
 
+Auth::routes();
+
+
 
 Route::get('/gyms', [GymController::class, 'index'])->name('gyms.index');
 

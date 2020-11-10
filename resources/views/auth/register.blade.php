@@ -23,7 +23,7 @@
                 <div class="box">
                     <p class="subtitle is-4">Registrarse</p>
                     <br />
-                    <form>
+                     <form method="post" action="{{ route('registro') }}">>
                         <div class="field">
                             <p class="control has-icons-left has-icons-right">
                                 <input class="input is-medium" type="nombre" placeholder="Nombre" />

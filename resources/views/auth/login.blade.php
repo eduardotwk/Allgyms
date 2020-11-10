@@ -23,7 +23,7 @@
                 <div class="box">
                     <p class="subtitle is-4">Inicio sesion</p>
                     <br />
-                    <form>
+                    <form method="post" action="{{ route('login') }}">
                         <div class="field">
                             <p class="control has-icons-left has-icons-right">
                                 <input class="input is-medium" type="email" placeholder="Correo electronico" />
