@@ -15,9 +15,10 @@
 </head>
 <body>
 <div id="app">
-    <section class="hero is-fullheight is-light" >
+    <section class="hero is-medium is-lightis-bold">
         <div class="hero-head">
             <nav class="navbar is-transparent is-spaced" role="navigation" aria-label="main navigation">
+
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item" href="rent.html">
@@ -92,34 +93,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="has-text-centered">
-                    <img class="m-t-50" src="media/1.jpg" alt="Find rentals">
-                </div>
             </div>
         </div>
-    </section>
-    <section>
-     <footer class="hero is-small is-light">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <a href="https://bulma.io">
-                    <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="171" height="32">
-                </a>
-                <div class="columns m-t-10">
-                    <div class="column">
-                        <nav class="has-text-grey-light">
-                            <a href="#" class="has-text-primary">Quienes somos</a> &bullet;
-                            <a href="#" class="has-text-primary">Nuestra historia</a> &bullet;
-                            <a href="#" class="has-text-primary">Contactenos</a> &bullet;
-                        </nav>
+        <footer class="hero is-small is-bold">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="171" height="32">
+                    </a>
+                    <div class="columns m-t-10">
+                        <div class="column">
+                            <nav class="has-text-grey-light">
+                                <a href="#" class="has-text-primary">Quienes somos</a> &bullet;
+                                <a href="#" class="has-text-primary">Nuestra historia</a> &bullet;
+                                <a href="#" class="has-text-primary">Contactenos</a> &bullet;
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="b-t m-t-30 p-t-30 has-text-grey-light is-size-7">
+                        AllGyms 2020 &copy <br> <a href="#" class="has-text-primary">Condiciones de uso</a> y <a class="has-text-primary" href="#">Politica de privacidad</a>.
                     </div>
                 </div>
-                <div class="b-t m-t-30 p-t-30 has-text-grey-light is-size-7">
-                    AllGyms 2020 &copy <br> <a href="#" class="has-text-primary">Condiciones de uso</a> y <a class="has-text-primary" href="#">Politica de privacidad</a>.
-                </div>
             </div>
-        </div>
-     </footer>
+        </footer>
     </section>
 </div>
 <script>
