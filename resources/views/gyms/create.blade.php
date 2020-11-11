@@ -1,6 +1,4 @@
-@extends('layouts.app')
-@section('content')
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
      <head>
          <meta charset="utf-8" />
@@ -21,56 +19,46 @@
      <body>
      <section class="section">
          <div class="container">
-             Publicar  Gimnasio
+             <h1 class="title">Publicacion de gimnasio</h1>
              <div>
                  <form action="/action_page.php">
                      <div class="field">
-                         <label class="label">Nombre Gym</label>
-                         <div class="control">
-                             <input class="input" type="text" name="nombre" placeholder="">
-                         </div>
+                         <label class="label">Nombre Gimnasio</label>
+                             <div class="control">
+                                 <input class="input is-primary" type="text" placeholder="">
+                             </div>
                      </div>
 
                      <div class="field">
-                         <label class="label">Descripcion</label>
                          <div class="control">
-                             <textarea class="textarea" placeholder=""></textarea>
+                             <label class="label">Detalles</label>
+                             <textarea class="textarea is-primary" placeholder=""></textarea>
+                         </div>
+                     </div>
+                     <div class="field">
+
+                     <div class="field">
+                         <label class="label">Telefono</label>
+                         <div class="control">
+                             <input class="input is-primary" type="text" placeholder="">
                          </div>
                      </div>
 
                      <div class="field">
                          <label class="label">Direccion</label>
                          <div class="control">
-                             <input class="input" type="text" name="direccion" placeholder="">
+                             <input class="input is-primary" type="text" placeholder="">
                          </div>
                      </div>
 
-                     <div class="field">
-                         <label class="label">Mensualidad</label>
-                         <div class="control">
-                             <input class="input" type="text" placeholder="$">
-                         </div>
-                     </div>
-
-                     <div class="field">
-                         <div class="control">
-                             <label class="checkbox">
-                                 <input type="checkbox">
-                                 I agree to the <a href="#">terms and conditions</a>
-                             </label>
-                         </div>
-                     </div>
-
-                     <div class="field">
-                         <div class="control">
-                             <label class="radio">
-                                 <input type="radio" name="question">
-                                 Yes
-                             </label>
-                             <label class="radio">
-                                 <input type="radio" name="question">
-                                 No
-                             </label>
+                     <div class="file">
+                         <div>
+                          <label class="control">
+                             <input class="file-input" type="file" name="resume">
+                             <span class="file-cta"><span class="file-icon">
+                             <i class="fas fa-upload"></i></span>
+                             <span class="control">Subir fotos…</span></span>
+                          </label>
                          </div>
                      </div>
 
@@ -78,14 +66,14 @@
                          <div class="control">
                              <button class="button is-primary is-outlined">Publicar gimnasio</button>
                          </div>
+
                          <div class="control">
-                             <button class="button is-primary is-outlined">Cancelar</button>
+                             <button class="button is-primary is-outlined">Volver</button>
                          </div>
                      </div>
                  </form>
              </div>
          </div>
      </section>
-     @endsection
      </body>
 
