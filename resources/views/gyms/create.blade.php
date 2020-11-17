@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+<div class="field">
+    <div class="control">
+        <label class="label">Detalles</label>
+        <textarea class="textarea is-primary" placeholder=""></textarea>
+    </div>
+</div>
 <html>
      <head>
          <meta charset="utf-8" />
@@ -19,37 +26,42 @@
      <body>
      <section class="section">
          <div class="container">
-             <h1 class="title">Publicacion de gimnasio</h1>
+             <h1 class="title">Publicar gimnasio</h1>
              <div>
-                 <form action="/action_page.php">
-                     <div class="field">
-                         <label class="label">Nombre Gimnasio</label>
+                 <form method="POST" action="{{ route('gyms.store') }}">
+                     @csrf
+
+                     <div class="field ">
+                         <label id= "name" name="name" class="label">Nombre Gimnasio</label>
+
                              <div class="control">
-                                 <input class="input is-primary" type="text" placeholder="">
+                                 <input class="input is-primary" id= "nombre" name="nombre" type="text" placeholder="">
                              </div>
                      </div>
 
-                     <div class="field">
-                         <div class="control">
-                             <label class="label">Detalles</label>
-                             <textarea class="textarea is-primary" placeholder=""></textarea>
-                         </div>
-                     </div>
+
                      <div class="field">
 
                      <div class="field">
                          <label class="label">Telefono</label>
                          <div class="control">
-                             <input class="input is-primary" type="text" placeholder="">
+                             <input class="input is-primary" id= "telefono" name="telefono" type="text" placeholder="">
                          </div>
                      </div>
 
                      <div class="field">
-                         <label class="label">Direccion</label>
+                         <label class="label">Ubicacion</label>
                          <div class="control">
-                             <input class="input is-primary" type="text" placeholder="">
+                             <input class="input is-primary" id= "ubicacion" name="ubicacion" type="text" placeholder="">
                          </div>
                      </div>
+
+                         <div class="field">
+                             <label class="label">Detalles</label>
+                             <div class="control">
+                                 <input class="input is-primary" id= "detalles" name="detalles" type="textarea" placeholder="">
+                             </div>
+                         </div>
 
                      <div class="file">
                          <div>
@@ -64,13 +76,14 @@
 
                      <div class="field is-grouped">
                          <div class="control">
-                             <button class="button is-primary is-outlined">Publicar gimnasio</button>
+                             <button type="submit" class="button is-primary is-outlined">Publicar gimnasio</button>
                          </div>
 
                          <div class="control">
                              <button class="button is-primary is-outlined">Volver</button>
                          </div>
-                     </div>
+
+                     </div></div>
                  </form>
              </div>
          </div>

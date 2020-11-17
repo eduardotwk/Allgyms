@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="author" content="Aldi Duzha">
-    <meta name="description" content="Search houses and apartments for rent anywhere within the US. View floorplans, pricing, images and more. Find your perfect rental.">
-    <meta name="keywords" content="bulma, rent, template, apartments, page, website, free, awesome">
-    <link rel="canonical" href="https://aldi.github.io/bulma-rent-template/index.html"/>
-    <title>AllGyms</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
-<div id="app">
+@extends('layouts.app')
+
+@section('content')
+
     <section class="hero is-medium is-lightis-bold">
         <div class="hero-head">
             <nav class="navbar is-transparent is-spaced" role="navigation" aria-label="main navigation">
@@ -32,14 +19,14 @@
                     </div>
                     <div class="navbar-menu" id="navbarTopMain">
                         <div class="navbar-end">
-                            <a href="{{ route('gyms.index') }}"
+                            <a href="#"
                                class="navbar-item has-text-weight-semibold">
                                 <button class="button is-primary is-outlined">Mejores Clasificados</button>
                             </a>
 
                             <a href="{{ url('create') }}"
                                class="navbar-item has-text-weight-semibold">
-                            <button class="button is-primary is-outlined">Publicar gimnasio</button>
+                                <button class="button is-primary is-outlined">Publicar gimnasio</button>
                             </a>
 
                             @if (Route::has('login'))
@@ -88,6 +75,29 @@
                                             <span class="has-text-weight-semibold">Buscar Gym</span>
                                         </button>
                                     </div>
+
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">nombre</th>
+                                            <th scope="col">ubicacion</th>
+                                            <th scope="col">telefono</th>
+                                            <th scope="col">detalles</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($gyms as $gym)
+                                            <tr>
+                                                <td>{{ $gym->nombre }}</td>
+                                                <td>{{ $gym->ubicacion }}</td>
+                                                <td>{!! $gym->telefono !!}</td>
+                                                <td>{!! $gym->detalles !!}</td>
+                                                <td class="text-center">
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
                             </form>
                         </div>
@@ -117,26 +127,4 @@
             </div>
         </footer>
     </section>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-            // Add a click event on each of them
-            $navbarBurgers.forEach( el => {
-                el.addEventListener('click', () => {
-                    // Get the target from the "data-target" attribute
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-                });
-            });
-        }
-    });
-</script>
-</body>
-</html>
+@endsection
