@@ -23,25 +23,25 @@
                                class="navbar-item has-text-weight-semibold">
                                 <button class="button is-primary is-outlined">Mejores Clasificados</button>
                             </a>
-
-                            <a href="{{ url('create') }}"
+                            <a href="{{ url('mygyms') }}"
                                class="navbar-item has-text-weight-semibold">
-                                <button class="button is-primary is-outlined">Publicar gimnasio</button>
+                                <button class="button is-primary is-outlined">Mis gimnasios</button>
                             </a>
+
+
 
                             @if (Route::has('login'))
                                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                     @auth
-                                        <a href="{{ url('/home') }}" class="button is-link is-outlined" class="button is-primary">Home</a>
+                                        <a href="{{ url('create') }}" class="button is-link is-outlined" class="button is-primary">Publicar gimnasio</a>
                                     @else
-                                        <a href="{{ route('login') }}" class="button is-primary is-outlined">Ingresar</a>
-                                        @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="button is-primary is-outlined">Registrarme</a>
-                                        @endif
+
                                     @endif
                                 </div>
                             @endif
                         </div>
+
+
                     </div>
                 </div>
             </nav>
@@ -75,30 +75,29 @@
                                             <span class="has-text-weight-semibold">Buscar Gym</span>
                                         </button>
                                     </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">nombre</th>
-                                            <th scope="col">ubicacion</th>
-                                            <th scope="col">telefono</th>
-                                            <th scope="col">detalles</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($gyms as $gym)
-                                            <tr>
-                                                <td>{{ $gym->nombre }}</td>
-                                                <td>{{ $gym->ubicacion }}</td>
-                                                <td>{!! $gym->telefono !!}</td>
-                                                <td>{!! $gym->detalles !!}</td>
-                                                <td class="text-center">
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
                                 </div>
+                                <div class="field has-addons has-shadow-field">
+                                <table class="table is-bordered is-striped is-fullwidth">
+                                    <thead>
+                                    <tr class="is-selected ">
+                                        <th >Nombre</th>
+                                        <th >Ubicacion</th>
+                                        <th >Telefono</th>
+                                        <th >Detalles</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($gyms as $gym)
+                                        <tr class="text-center">
+                                            <td>{{ $gym->nombre }}</td>
+                                            <td>{{ $gym->ubicacion }}</td>
+                                            <td>{!! $gym->telefono !!}</td>
+                                            <td>{!! $gym->detalles !!}</td>
+
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table></div>
                             </form>
                         </div>
                     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Models\gym;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 use App\Http\Controllers\Controller;
@@ -14,11 +15,17 @@ class GymController extends Controller
 
 
     public function index()
-    {$gyms = Gym::latest()->paginate(5);
+    {
+        $currentTenant = DB::table(‘user_preferences’)->where(‘user_id’, auth()->user()->id)->first();
+
+        $gyms = Gym::where(‘tenant_id’, $currentTenant->current_tenant)>orderby()->get();
+
+
         return view('gyms.index', compact('gyms'));
 
 
     }
+
 
 
     public function create()
