@@ -15,7 +15,8 @@ class Gym extends Model
         'nombre',
         'ubicacion',
         'telefono',
-        'detalles'];
+        'detalles',
+        'tenant_id'];
 
 
 

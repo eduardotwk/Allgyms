@@ -16,9 +16,10 @@ class GymController extends Controller
 
     public function index()
     {
-        $currentTenant = DB::table(‘user_preferences’)->where(‘user_id’, auth()->user()->id)->first();
+        $currentTenant = DB::table('user_preferences')->where('user_id', auth()->user()->id)->first();
 
-        $gyms = Gym::where(‘tenant_id’, $currentTenant->current_tenant)>orderby()->get();
+        $gyms = Gym::where('tenant_id', $currentTenant->current_tenant)->Orderby('nombre')->get();
+
 
 
         return view('gyms.index', compact('gyms'));
