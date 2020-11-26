@@ -26,6 +26,15 @@ class GymController extends Controller
 
 
     }
+    public function mygyms()
+    { $currentTenant = DB::table('user_preferences')->where('user_id', auth()->user()->id)->first();
+
+        $gyms = Gym::where('tenant_id', $currentTenant->current_tenant)->Orderby('nombre')->get();
+
+        return view('gyms.mygyms', compact('gyms'));
+
+
+    }
 
 
 

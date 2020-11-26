@@ -37,6 +37,8 @@ Route::get('/create', [GymController::class, 'create'])->name('gyms.create');
 
 Route::get('gyms', [PublicGymController::class, 'index'])->name('public.index');
 
+
+
 Route::prefix('my-gyms')
     ->name('gyms.')
 
@@ -53,7 +55,7 @@ Route::prefix('my-gyms')
        // Route::get('view', [BenefitController::class, 'view'])->name('view');
        // Route::get('{benefit}', [BenefitController::class, 'show'])->name('show');
         Route::get('', [GymController::class, 'index'])->name('index');
-        Route::get('/mygyms', [GymController::class, 'mygyms'])->name('mygyms');
+        Route::get('mygyms', [GymController::class, 'mygyms'])->name('mygyms');
     });
 
 Auth::routes();
