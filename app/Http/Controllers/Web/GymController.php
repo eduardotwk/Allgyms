@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Models\Comuna;
 use App\Models\gym;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -10,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Http\Controllers\Controller;
 
-class GymController extends Controller
+class GymController extends BaseWebController
 {
     //
 
@@ -21,41 +22,35 @@ class GymController extends Controller
 
         $gyms = Gym::where('tenant_id', $currentTenant->current_tenant)->Orderby('nombre')->get();
 
-
-
         return view('gyms.index', compact('gyms'));
-
-
     }
 
 
     public function mygyms()
-    { $currentTenant = DB::table('user_preferences')->where('user_id', auth()->user()->id)->first();
+    {
+        $currentTenant = DB::table('user_preferences')->where('user_id', auth()->user()->id)->first();
 
         $gyms = Gym::where('tenant_id', $currentTenant->current_tenant)->Orderby('nombre')->get();
 
         return view('gyms.mygyms', compact('gyms'));
-
-
     }
-
-
-
 
     public function create()
     {
+        $comunas = Comuna::query()->get();
 
-
-        return view('gyms.create');
+        return view('gyms.create')->with(['comunas' => $comunas]);
     }
 
 //|image|mimes:png,jpg,jpeg//
 
     public function store(Request $request)
     {
+        //ddd($request->all());
         $params = $this->validate($request, [
         'nombre'     => 'required',
         'ubicacion'     => 'required',
+        'comuna_id'     => 'required',
         'telefono'     => 'sometimes',
         'detalles'   => 'sometimes'
         ]);
@@ -66,7 +61,7 @@ class GymController extends Controller
 
           $gym = new Gym();
           $gym->fill($params);
-          $gym->tenant_id = auth()->id();
+          $gym->tenant_id = $this->currentTenant()->id;
 
 
         $gym->save();

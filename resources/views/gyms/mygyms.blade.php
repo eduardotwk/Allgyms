@@ -73,6 +73,7 @@
                                         </tbody>
                                     </table>
                                 </div>
+
             </div>
         </div>
         <footer class="hero is-small is-bold">

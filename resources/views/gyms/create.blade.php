@@ -19,7 +19,7 @@
                      </div>
 
 
-                     <div class="field">
+                     <br class="field">
 
                      <div class="field">
                          <label class="label">Telefono</label>
@@ -42,16 +42,21 @@
                              </div>
                          </div>
 
-                     <div class="file">
-                         <div>
-                          <label class="control">
-                             <input class="file-input" type="file" name="resume">
-                             <span class="file-cta"><span class="file-icon">
-                             <i class="fas fa-upload"></i></span>
-                             <span class="control">Subir fotos…</span></span>
-                          </label>
+                     <label class="label">Comuna</label>
+                     <div class="select option">
+
+                             <select name="comuna_id">
+
+                                 @foreach($comunas as $comuna)
+
+                                     <option value={{ $comuna->id  }}> {{ $comuna->nombre }} </option>
+                                 @endforeach
+
+                             </select>
                          </div>
-                     </div>
+                         <br>
+                     <br>
+                     <br>
 
                      <div class="field is-grouped">
                          <div class="control">
@@ -61,6 +66,8 @@
                          <div class="control">
                              <button class="button is-primary is-outlined">Volver</button>
                          </div>
+
+
 
                      </div></div>
                  </form>

@@ -69,6 +69,7 @@
                                         <th >Ubicacion</th>
                                         <th >Telefono</th>
                                         <th >Detalles</th>
+                                        <th >Comuna</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -78,6 +79,7 @@
                                             <td>{{ $gym->ubicacion }}</td>
                                             <td>{!! $gym->telefono !!}</td>
                                             <td>{!! $gym->detalles !!}</td>
+                                            <td>{!! $gym->comunas !!}</td>
 
                                         </tr>
                                     @endforeach

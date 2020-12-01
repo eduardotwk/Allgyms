@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tenant extends Model
+class Comuna extends Model
 {
     use HasFactory;
-    protected $table = 'tenant';
+
+    protected $table = 'comunas';
 
     protected $fillable = [
-        'nombre',
         'codigo',
-        'telefono',
-        'email',
+        'nombre'
     ];
+
 }
