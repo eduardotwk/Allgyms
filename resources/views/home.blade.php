@@ -23,7 +23,7 @@
                                class="navbar-item has-text-weight-semibold">
                                 <button class="button is-primary is-outlined">Mejores Clasificados</button>
                             </a>
-                            <a href="{{ url('mygyms') }}"
+                            <a href="{{ url('gyms.mygyms') }}"
                                class="navbar-item has-text-weight-semibold">
                                 <button class="button is-primary is-outlined">Mis gimnasios</button>
                             </a>
@@ -33,7 +33,7 @@
                             @if (Route::has('login'))
                                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                     @auth
-                                        <a href="{{ url('create') }}" class="button is-link is-outlined" class="button is-primary">Publicar gimnasio</a>
+                                        <a href="{{ url('gyms.create') }}" class="button is-link is-outlined" class="button is-primary">Publicar gimnasio</a>
                                     @else
 
                                     @endif
