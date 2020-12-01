@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Models\gym;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -26,6 +27,8 @@ class GymController extends Controller
 
 
     }
+
+
     public function mygyms()
     { $currentTenant = DB::table('user_preferences')->where('user_id', auth()->user()->id)->first();
 
@@ -35,6 +38,7 @@ class GymController extends Controller
 
 
     }
+
 
 
 
@@ -62,8 +66,10 @@ class GymController extends Controller
 
           $gym = new Gym();
           $gym->fill($params);
-          $gym->tenant_id = 1;
-          $gym->save();
+          $gym->tenant_id = auth()->id();
+
+
+        $gym->save();
 
 
         //$gym = Gym::create([
@@ -82,6 +88,9 @@ class GymController extends Controller
             return redirect()->route('gyms.index')->with(['error' => 'error datos erroneos']);
         }
     }
+
+
+
 
 
 

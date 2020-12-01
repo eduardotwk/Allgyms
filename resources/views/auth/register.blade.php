@@ -53,7 +53,7 @@
 
                             <div class="field">
                                 <p class="control has-icons-left">
-                                    <input id="password-confirm" class="input is-medium" type="confirm_password" name="password_confirmation" placeholder="Confirmar contraseña" />
+                                    <input id="password-confirm" class="input is-medium" type="password" name="password_confirmation" placeholder="Confirmar contraseña" />
                                     <span class="icon is-small is-left">
                               <i class="fas fa-lock"></i></span>
                                 </p>
