@@ -47,7 +47,7 @@ class GymController extends BaseWebController
             //dd($query);
 
             $gimnasios = Gym::where('nombre','LIKE','%'.$query.'%')->orderBy('id','asc')->get();
-            //dd($gimnasios);
+
 
             return view('gyms.resultados',compact('gimnasios'));
         }

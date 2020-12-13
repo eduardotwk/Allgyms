@@ -45,7 +45,7 @@ Route::prefix('my-gyms')
         Route::post('', [GymController::class, 'store'])->name('store');
         Route::get('', [GymController::class, 'index'])->name('index');
         Route::get('mygyms', [GymController::class, 'mygyms'])->name('mygyms');
-        Route::get('/resultados', [GymController::class, 'BuscadorGyms'])->name('resultados');
+        Route::get('resultados', [GymController::class, 'BuscadorGyms'])->name('resultados');
     });
 
 Auth::routes();

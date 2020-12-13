@@ -26,7 +26,27 @@
           </div>
      </h6>
     <div class="field has-addons has-shadow-field">
+        <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+            <tr class="is-selected ">
+                <th >Nombre</th>
+                <th >Ubicacion</th>
+                <th >Telefono</th>
+                <th >Detalles</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($gimnasios as $gim)
+                <tr class="text-center">
+                    <td>{{ $gim->nombre }}</td>
+                    <td>{{ $gim->ubicacion }}</td>
+                    <td>{!! $gim->telefono !!}</td>
+                    <td>{!! $gim->detalles !!}</td>
 
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
 
 </body>
