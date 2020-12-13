@@ -28,8 +28,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
-                <a class="button is-primary is-outlined" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="button is-primary is-outlined" href="{{ url('home') }}">
+                    {{ config('app.name', 'Inicio') }}
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

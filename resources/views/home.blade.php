@@ -89,7 +89,8 @@
                                         <tbody>
 
                                         </tbody>
-                                    </table></div>
+                                    </table>
+                                </div>
                             </form>
                         </div>
                     </div>

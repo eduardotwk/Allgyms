@@ -57,8 +57,7 @@
                          <br>
                      <br>
                      <br>
-
-                     <div class="field is-grouped">
+                         <div class="field is-grouped">
                          <div class="control">
                              <button type="submit" class="button is-primary is-outlined">Publicar gimnasio</button>
                          </div>
@@ -67,9 +66,7 @@
                              <button class="button is-primary is-outlined">Volver</button>
                          </div>
 
-
-
-                     </div></div>
+                     </div>
                  </form>
              </div>
          </div>

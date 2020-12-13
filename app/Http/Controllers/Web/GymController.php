@@ -15,13 +15,11 @@ class GymController extends BaseWebController
 {
     //
 
-
     public function index()
     {
-        $currentTenant = DB::table('user_preferences')->where('user_id', auth()->user()->id)->first();
+        $currentTenant = DB::table(‘user_preferences’)->where(‘user_id’, auth()->user()->id)->first();
 
-        $gyms = Gym::where('tenant_id', $currentTenant->current_tenant)->Orderby('nombre')->get();
-
+        $gyms = Gym::where(‘tenant_id’, $currentTenant->current_tenant)>orderby()->get();
         return view('gyms.index', compact('gyms'));
     }
 
@@ -42,7 +40,21 @@ class GymController extends BaseWebController
         return view('gyms.create')->with(['comunas' => $comunas]);
     }
 
-//|image|mimes:png,jpg,jpeg//
+    public function BuscadorGyms(Request $request)
+    {
+        if($request){
+            $query = trim($request->get('buscador'));
+            //dd($query);
+
+            $gimnasios = Gym::where('nombre','LIKE','%'.$query.'%')->orderBy('id','asc')->get();
+            //dd($gimnasios);
+
+            return view('gyms.resultados',compact('gimnasios'));
+        }
+
+    }
+
+
 
     public function store(Request $request)
     {
@@ -55,9 +67,6 @@ class GymController extends BaseWebController
         'detalles'   => 'sometimes'
         ]);
 
-        //upload image
-        //$image = $request->file('image');
-        // $image->storeAs('public/blogs', $image->hashName());
 
           $gym = new Gym();
           $gym->fill($params);

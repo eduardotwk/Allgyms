@@ -28,15 +28,11 @@ Route::get('/home', function () {
 Auth::routes();
 
 
-
 Route::get('/gyms', [GymController::class, 'index'])->name('gyms.index');
 
 Route::get('/create', [GymController::class, 'create'])->name('gyms.create');
 
-
-
 Route::get('gyms', [PublicGymController::class, 'index'])->name('public.index');
-
 
 
 Route::prefix('my-gyms')
@@ -46,16 +42,10 @@ Route::prefix('my-gyms')
     ->group(function () {
 
         Route::get('create', [GymController::class, 'create'])->name('create');
-       // Route::get('edit', [BenefitController::class, 'edit'])->name('edit');
         Route::post('', [GymController::class, 'store'])->name('store');
-       // Route::post('mygyms', [GymController::class, 'index'])->name('mygyms');
-
-        //Route::patch('{benefit}', [BenefitController::class, 'update'])->name('update');
-      //  Route::delete('{benefit}', [BenefitController::class, 'delete'])->name('delete');
-       // Route::get('view', [BenefitController::class, 'view'])->name('view');
-       // Route::get('{benefit}', [BenefitController::class, 'show'])->name('show');
         Route::get('', [GymController::class, 'index'])->name('index');
         Route::get('mygyms', [GymController::class, 'mygyms'])->name('mygyms');
+        Route::get('/resultados', [GymController::class, 'BuscadorGyms'])->name('resultados');
     });
 
 Auth::routes();
@@ -63,3 +53,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+// Route::get('edit', [BenefitController::class, 'edit'])->name('edit');
+// Route::post('mygyms', [GymController::class, 'index'])->name('mygyms');
+// Route::post('mygyms', [GymController::class, 'index'])->name('mygyms');
+
+//Route::patch('{benefit}', [BenefitController::class, 'update'])->name('update');
+//  Route::delete('{benefit}', [BenefitController::class, 'delete'])->name('delete');
+// Route::get('view', [BenefitController::class, 'view'])->name('view');
+// Route::get('{benefit}', [BenefitController::class, 'show'])->name('show');
