@@ -76,21 +76,6 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="field has-addons has-shadow-field">
-                                    <table class="table is-bordered is-striped is-fullwidth">
-                                        <thead>
-                                        <tr class="is-selected ">
-                                            <th >Nombre</th>
-                                            <th >Ubicacion</th>
-                                            <th >Telefono</th>
-                                            <th >Detalles</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-
-                                        </tbody>
-                                    </table>
-                                </div>
                             </form>
                         </div>
                     </div>
