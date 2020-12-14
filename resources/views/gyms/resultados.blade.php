@@ -21,7 +21,6 @@
 <body>
     <h6>
           <div class="notification is-primary is-light">
-           <button class="delete"></button>
             Los resultados encontrados
           </div>
      </h6>
