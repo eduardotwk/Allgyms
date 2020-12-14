@@ -23,7 +23,7 @@
                                class="navbar-item has-text-weight-semibold">
                                 <button class="button is-primary is-outlined">Mejores Clasificados</button>
                             </a>
-                            <a href="{{ route('gyms.store') }}"
+                            <a href="{{ route('gyms.mygyms') }}"
                                class="navbar-item has-text-weight-semibold">
                                 <button class="button is-primary is-outlined">Mis gimnasios</button>
                             </a>

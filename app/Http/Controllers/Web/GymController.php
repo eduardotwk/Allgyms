@@ -48,10 +48,15 @@ class GymController extends BaseWebController
 
             $gimnasios = Gym::where('nombre','LIKE','%'.$query.'%')->orderBy('id','asc')->get();
 
+            //dd($gimnasios);
 
             return view('gyms.resultados',compact('gimnasios'));
         }
-
+        else {empty($request);
+            {
+                echo 'No se han encontrado resultados para : '. $request;
+            }
+        }
     }
 
 
@@ -84,12 +89,12 @@ class GymController extends BaseWebController
            // 'detalles'   => $request->detalles
        // ]);
 
-        if($gym){
+        if($gym->save()){
             //redirect dengan pesan sukses
-            return redirect()->route('gyms.index')->with(['success' => 'tema creado correctamente']);
+            return redirect()->route('gyms.mygyms')->with(['success' => 'tema creado correctamente']);
         }else{
             //redirect dengan pesan error
-            return redirect()->route('gyms.index')->with(['error' => 'error datos erroneos']);
+            return redirect()->route('gyms.create')->with(['error' => 'error datos erroneos']);
         }
     }
 

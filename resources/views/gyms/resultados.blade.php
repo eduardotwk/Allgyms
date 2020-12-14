@@ -22,31 +22,38 @@
     <h6>
           <div class="notification is-primary is-light">
            <button class="delete"></button>
-            Tus resultados son los siguentes:
+            Los resultados encontrados
           </div>
      </h6>
-    <div class="field has-addons has-shadow-field">
-        <table class="table is-bordered is-striped is-fullwidth">
-            <thead>
-            <tr class="is-selected ">
-                <th >Nombre</th>
-                <th >Ubicacion</th>
-                <th >Telefono</th>
-                <th >Detalles</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($gimnasios as $gim)
-                <tr class="text-center">
-                    <td>{{ $gim->nombre }}</td>
-                    <td>{{ $gim->ubicacion }}</td>
-                    <td>{!! $gim->telefono !!}</td>
-                    <td>{!! $gim->detalles !!}</td>
+    <div class="hero-body  p-b-30 ">
+        <div class="container">
 
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+
+            <div class="field has-addons has-shadow-field">
+                <table class="table is-bordered is-striped is-fullwidth">
+                    <thead>
+                    <tr class="is-selected ">
+                        <th >Nombre</th>
+                        <th >Ubicacion</th>
+                        <th >Telefono</th>
+                        <th >Detalles</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($gimnasios as $gims)
+                        <tr class="text-center">
+                            <td>{{ $gims->nombre }}</td>
+                            <td>{{ $gims->ubicacion }}</td>
+                            <td>{!! $gims->telefono !!}</td>
+                            <td>{!! $gims->detalles !!}</td>
+
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
     </div>
 
 </body>
