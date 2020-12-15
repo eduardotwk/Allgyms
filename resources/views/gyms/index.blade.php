@@ -51,7 +51,7 @@
             <div class="container">
                 <h2 class="subtitle">
 					<span class="has-text-centered is-block">
-						Busca, publica y compara precios de gimnasios.
+						Busca, publica y compara precios de gimnasios
 					</span>
                 </h2>
                 <h1 class="title">
@@ -60,7 +60,7 @@
                 <div class="columns is-centered">
                     <div class="column is-7">
                         <div class="search-form">
-                            <form>
+                            <form method="get" action="{{route('gyms.resultadouser')}}">
                                 <div class="field has-addons has-shadow-field">
                                     <div class="control has-icons-left is-expanded">
                                         <input type="text" id="mainSearch" defaultvalue="" placeholder="Ingrese nombre de gimnasio..." class="input is-large">

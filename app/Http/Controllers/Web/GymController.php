@@ -63,6 +63,29 @@ class GymController extends BaseWebController
             }
         }
     }
+    public function BuscadorUsuarioRegistrado(Request $request)
+    {
+        if($request){
+            $buscador = trim($request->get('buscador'));
+            //dd($query);
+
+            $gimnasios = Gym::query()->with('comuna')
+                ->where('nombre','LIKE','%'.$buscador.'%')
+                ->orWhereHas('comuna', function ($query) use ($buscador) {
+                    $query->where('nombre','LIKE','%'.$buscador.'%');
+                })
+                ->orderBy('nombre','asc')->get();
+
+            //dd($gimnasios);
+
+            return view('gyms.resultadouser',compact('gimnasios'));
+        }
+        else {empty($request);
+            {
+                echo 'No se han encontrado resultados para : '. $request;
+            }
+        }
+    }
 
 
 
