@@ -79,7 +79,7 @@
                                             <td>{{ $gym->ubicacion }}</td>
                                             <td>{!! $gym->telefono !!}</td>
                                             <td>{!! $gym->detalles !!}</td>
-                                            <td>{!! $gym->comunas !!}</td>
+                                            <td>{!! $gym->comuna->nombre !!}</td>
 
                                         </tr>
                                     @endforeach

@@ -19,6 +19,10 @@ class Gym extends Model
         'detalles',
         'tenant_id'];
 
+    public function comuna(){
+        return $this->belongsTo(Comuna::class, 'comuna_id');
+    }
+
 
 
 }
