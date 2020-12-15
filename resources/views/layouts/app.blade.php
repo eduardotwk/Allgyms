@@ -33,20 +33,16 @@
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="button is-primary is-outlined" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="button is-primary is-outlined" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="button is-primary is-outlined" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="button is-primary is-outlined" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
@@ -58,7 +54,7 @@
                                 <a class="button is-primary is-outlined" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Cerrar sesion') }}
+                                    {{ __('Cerrar sesión') }}
                                 </a>
 
 
@@ -81,24 +77,7 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-            // Add a click event on each of them
-            $navbarBurgers.forEach( el => {
-                el.addEventListener('click', () => {
-                    // Get the target from the "data-target" attribute
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-                });
-            });
-        }
-    });
+
 </script>
 
 
