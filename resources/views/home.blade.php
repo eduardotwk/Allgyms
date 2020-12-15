@@ -2,7 +2,6 @@
 
 @section('content')
 
-
         <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,12 +34,28 @@
                         </a>
                     </div>
                     <div class="navbar-menu" id="navbarTopMain">
-                        <div class="navbar-end">
-                            <a href="{{ route('gyms.index') }}"
-                               class="navbar-item has-text-weight-semibold">
-                                <button class="button is-primary is-outlined">Mejores Clasificados</button>
-                            </a>
-                        </div>
+                            <div class="navbar-end">
+                                <a href="#"
+                                   class="navbar-item has-text-weight-semibold">
+                                    <button class="button is-primary is-outlined">Mejores Clasificados</button>
+                                </a>
+                                <a href="{{ route('gyms.mygyms') }}"
+                                   class="navbar-item has-text-weight-semibold">
+                                    <button class="button is-primary is-outlined">Mis gimnasios</button>
+                                </a>
+
+
+
+                                @if (Route::has('login'))
+                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                        @auth
+                                            <a href="{{ route('gyms.create') }}" class="button is-link is-outlined" class="button is-primary">Publicar gimnasio</a>
+                                        @else
+
+                                        @endif
+                                    </div>
+                                @endif
+                            </div>
                     </div>
                 </div>
             </nav>
