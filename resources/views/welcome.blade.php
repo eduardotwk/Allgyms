@@ -3,7 +3,7 @@
 @section('content')
 
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -58,7 +58,7 @@
                 <div class="columns is-centered">
                     <div class="column is-7">
                         <div class="search-form">
-                            <form method="get" action="{{route('gymspublic.resultados')}}">
+                            <form method="get" action="{{route('gyms.resultados')}}">
                                 <div class="field has-addons has-shadow-field">
                                     <div class="control has-icons-left is-expanded">
                                         <input type="search" name="buscador"  placeholder="Ingrese nombre de gimnasio..." class="input is-large">
@@ -69,12 +69,12 @@
 											</svg>
 										</span>
                                     </div>
-                                     <div class="control">
+                                    <div class="control">
                                         <button type="submit" class="button is-large is-primary">
                                             <span class="has-text-weight-semibold">Buscar Gym</span>
                                         </button>
-                                         <br>
-                                     </div>
+                                        <br>
+                                    </div>
                                     <br>
                                 </div>
                             </form>

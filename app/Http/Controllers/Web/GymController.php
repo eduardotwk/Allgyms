@@ -42,7 +42,7 @@ class GymController extends BaseWebController
     public function BuscadorGyms(Request $request)
     {
         if($request){
-            $query = trim($request->get('buscador'));
+            $buscador = trim($request->get('buscador'));
             //dd($query);
 
             $gimnasios = Gym::query()->with('comuna')
@@ -88,29 +88,29 @@ class GymController extends BaseWebController
     {
         //ddd($request->all());
         $params = $this->validate($request, [
-        'nombre'     => 'required',
-        'ubicacion'     => 'required',
-        'comuna_id'     => 'required',
-        'telefono'     => 'sometimes',
-        'detalles'   => 'sometimes'
+            'nombre'     => 'required',
+            'ubicacion'     => 'required',
+            'comuna_id'     => 'required',
+            'telefono'     => 'sometimes',
+            'detalles'   => 'sometimes'
         ]);
 
 
-          $gym = new Gym();
-          $gym->fill($params);
-          $gym->tenant_id = $this->currentTenant()->id;
+        $gym = new Gym();
+        $gym->fill($params);
+        $gym->tenant_id = $this->currentTenant()->id;
 
 
         $gym->save();
 
 
         //$gym = Gym::create([
-           // 'image'     => $image->hashName(),
-          //  'nombre'     => $request->name,
-          //  'ubicacion'     => $request->ubicacion,
-           // 'telefono'     => $request->telefono,
-           // 'detalles'   => $request->detalles
-       // ]);
+        // 'image'     => $image->hashName(),
+        //  'nombre'     => $request->name,
+        //  'ubicacion'     => $request->ubicacion,
+        // 'telefono'     => $request->telefono,
+        // 'detalles'   => $request->detalles
+        // ]);
 
         if($gym->save()){
             //redirect dengan pesan sukses
