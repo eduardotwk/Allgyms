@@ -14,4 +14,5 @@ class PublicGymController extends Controller
         return view('gyms.public.index', compact('gyms'));
     }
 
+
 }

@@ -39,7 +39,6 @@ class GymController extends BaseWebController
 
         return view('gyms.create')->with(['comunas' => $comunas]);
     }
-
     public function BuscadorGyms(Request $request)
     {
         if($request){
@@ -63,6 +62,7 @@ class GymController extends BaseWebController
             }
         }
     }
+
     public function BuscadorUsuarioRegistrado(Request $request)
     {
         if($request){
