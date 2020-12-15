@@ -42,7 +42,7 @@ class GymController extends BaseWebController
     public function BuscadorGyms(Request $request)
     {
         if($request){
-            $buscador = trim($request->get('buscador'));
+            $query = trim($request->get('buscador'));
             //dd($query);
 
             $gimnasios = Gym::query()->with('comuna')
@@ -69,12 +69,7 @@ class GymController extends BaseWebController
             $buscador = trim($request->get('buscador'));
             //dd($query);
 
-            $gimnasios = Gym::query()->with('comuna')
-                ->where('nombre','LIKE','%'.$buscador.'%')
-                ->orWhereHas('comuna', function ($query) use ($buscador) {
-                    $query->where('nombre','LIKE','%'.$buscador.'%');
-                })
-                ->orderBy('nombre','asc')->get();
+            $gimnasios = Gym::where('nombre','LIKE','%'.$query.'%')->orderBy('id','asc')->get();
 
             //dd($gimnasios);
 

@@ -58,7 +58,7 @@
                 <div class="columns is-centered">
                     <div class="column is-7">
                         <div class="search-form">
-                            <form method="get" action="{{route('gyms.resultados')}}">
+                            <form method="get" action="{{route('gymspublic.resultados')}}">
                                 <div class="field has-addons has-shadow-field">
                                     <div class="control has-icons-left is-expanded">
                                         <input type="search" name="buscador"  placeholder="Ingrese nombre de gimnasio..." class="input is-large">

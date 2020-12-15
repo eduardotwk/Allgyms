@@ -15,4 +15,23 @@ class PublicGymController extends Controller
     }
 
 
+    public function BuscadorGyms(Request $request)
+    {
+        if($request){
+            $query = trim($request->get('buscador'));
+            //dd($query);
+
+            $gimnasios = Gym::where('nombre','LIKE','%'.$query.'%')->orderBy('id','asc')->get();
+
+            //dd($gimnasios);
+
+            return view('public.resultados',compact('gimnasios'));
+        }
+        else {empty($request);
+            {
+                echo 'No se han encontrado resultados para : '. $request;
+            }
+        }
+    }
+
 }
