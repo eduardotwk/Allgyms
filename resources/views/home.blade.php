@@ -27,9 +27,7 @@
 
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item" href="rent.html">
-                            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma Rent" width="80" height="20">
-                        </a>
+
                         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarTopMain">
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
@@ -88,18 +86,6 @@
         <footer class="hero is-small is-bold">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <a href="https://bulma.io">
-                        <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="171" height="32">
-                    </a>
-                    <div class="columns m-t-10">
-                        <div class="column">
-                            <nav class="has-text-grey-light">
-                                <a href="#" class="has-text-primary">Quienes somos</a> &bullet;
-                                <a href="#" class="has-text-primary">Nuestra historia</a> &bullet;
-                                <a href="#" class="has-text-primary">Contactenos</a> &bullet;
-                            </nav>
-                        </div>
-                    </div>
                     <div class="b-t m-t-30 p-t-30 has-text-grey-light is-size-7">
                         AllGyms 2020 &copy <br> <a href="#" class="has-text-primary">Condiciones de uso</a> y <a class="has-text-primary" href="#">Politica de privacidad</a>.
                     </div>
@@ -109,24 +95,7 @@
     </section>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-        // Add a click event on each of them
-        $navbarBurgers.forEach( el => {
-            el.addEventListener('click', () => {
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-        const $target = document.getElementById(target);
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-    });
-    });
-    }
-    });
+
 </script>
 </body>
 </html>
