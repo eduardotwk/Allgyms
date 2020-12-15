@@ -36,6 +36,7 @@
                         <th >Ubicacion</th>
                         <th >Telefono</th>
                         <th >Detalles</th>
+                        <th >Comuna</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -45,7 +46,7 @@
                             <td>{{ $gims->ubicacion }}</td>
                             <td>{!! $gims->telefono !!}</td>
                             <td>{!! $gims->detalles !!}</td>
-
+                            <td>{!! $gims->comuna->nombre !!}</td>
                         </tr>
                     @endforeach
                     </tbody>
