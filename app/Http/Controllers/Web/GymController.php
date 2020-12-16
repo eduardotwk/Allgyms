@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Helpers\GymHelper;
 use App\Models\Comuna;
 use App\Models\gym;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -45,12 +46,7 @@ class GymController extends BaseWebController
             $buscador = trim($request->get('buscador'));
             //dd($query);
 
-            $gimnasios = Gym::query()->with('comuna')
-                ->where('nombre','LIKE','%'.$buscador.'%')
-                ->orWhereHas('comuna', function ($query) use ($buscador) {
-                    $query->where('nombre','LIKE','%'.$buscador.'%');
-                })
-                ->orderBy('nombre','asc')->get();
+           $gimnasios = (new GymHelper())->queryBuscarUsuario($buscador)->get();
 
             //dd($gimnasios);
 
@@ -69,8 +65,7 @@ class GymController extends BaseWebController
             $buscador = trim($request->get('buscador'));
             //dd($query);
 
-            $gimnasios = Gym::where('nombre','LIKE','%'.$query.'%')->orderBy('id','asc')->get();
-
+            $gimnasios = (new GymHelper())->queryBuscarUsuario($buscador)->get();
             //dd($gimnasios);
 
             return view('gyms.resultadouser',compact('gimnasios'));
